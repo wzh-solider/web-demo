@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS底部导航栏</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4144272_3vtq4renm6e.css">
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li class="active" style="--clr:#f44336"><span><i class="iconfont icon-home"></i></span></li>
+            <li style="--clr:#0fc70f"><span><i class="iconfont icon-envelope"></i></span></li>
+            <li style="--clr:#2196f3"><span><i class="iconfont icon-comment"></i></span></li>
+            <li style="--clr:#b145e9"><span><i class="iconfont icon-heart"></i></span></li>
+            <li style="--clr:#ffa111"><span><i class="iconfont icon-user"></i></span></li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+</body>
+<script>
+    const lis = document.querySelectorAll('.nav li');
+    lis.forEach(li => li.addEventListener("click",
+        function () {
+            lis.forEach(item => {
+                item.classList.remove('active');
+                this.classList.add('active');
+            })
+        }))
+</script>
+
+</html>
