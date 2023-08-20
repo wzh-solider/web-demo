@@ -5,3 +5,5 @@
 - [CSS底部导航栏](https://wzh-solider.github.io/web-demo/CSS底部导航栏/)
 
 - [CSS内凹导航栏](https://wzh-solider.github.io/web-demo/CSS内凹导航栏/)
+
+- [CSS焦点轮播](https://wzh-solider.github.io/web-demo/CSS焦点轮播/)

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-焦点轮播</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bigbox"></div>
+      <ul>
+        <li><img class="active" src="img/1.png" alt="" /></li>
+        <li><img src="img/2.png" alt="" /></li>
+        <li><img src="img/3.png" alt="" /></li>
+        <li><img src="img/4.png" alt="" /></li>
+        <li><img src="img/5.png" alt="" /></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 获取元素
+    const bigbox = document.querySelector('.bigbox');
+    const imgs = document.querySelectorAll('img');
+    let canChange = true; // 节流处理
+
+    // 遍历注册点击事件
+    imgs.forEach(
+      (img) => {
+          img.addEventListener('click', function () {
+            if (canChange) {
+              // 动态将图片路径，作为背景路径设置给大盒子
+              bigbox.style.backgroundImage = `url(${this.src})`;
+
+              // 重置所有类名，给当前项添加 active 类
+              imgs.forEach((item) => item.classList.remove("active"));
+              this.classList.add("active");
+
+              // 节流处理，开启切换动画，1秒后再放开
+              canChange = false;
+              setTimeout(() => (canChange = true), 1000);
+            }
+          });
+        });
+  </script>
+</html>
