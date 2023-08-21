@@ -7,3 +7,5 @@
 - [CSS内凹导航栏](https://wzh-solider.github.io/web-demo/CSS内凹导航栏/)
 
 - [CSS焦点轮播](https://wzh-solider.github.io/web-demo/CSS焦点轮播/)
+
+- [CSS相片3d选中](https://wzh-solider.github.io/web-demo/CSS相片3d选中/)
